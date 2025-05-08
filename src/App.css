@@ -1,0 +1,166 @@
+/* WeatherApp.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #72b1d8, #8364e8);
+  padding: 20px;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+}
+
+.search-button {
+  background-color: #4361ee;
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #3a56d4;
+}
+
+.weather-info {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.city-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.detail-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.detail-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.placeholder-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.message-primary {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.message-secondary {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Add background image */
+@media (min-width: 768px) {
+  .weather-container {
+    background-image: url('https://source.unsplash.com/1600x900/?nature,sky');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* For responsive design */
+@media (max-width: 600px) {
+  .weather-card {
+    padding: 20px;
+  }
+  
+  .app-title {
+    font-size: 1.8rem;
+  }
+  
+  .temperature {
+    font-size: 2.5rem;
+  }
+}
